@@ -1,7 +1,27 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
 
 /******************************************
 4. Header
 ******************************************/
+.page-header .header.panel {
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+	line-height: 32px !important;
+	color: #ccc !important;
+}
+.page-header .panel.wrapper {
+	background: #242424 !important;
+	border-bottom: 1px solid #000 !important;;
+}
+.page-header {
+	background-color: #3a3a3b;	
+}
+
+
 .header-container {
 	background-color: #3a3a3b
 }
@@ -157,7 +177,7 @@
 	line-height: normal;
 	display: inline-block;
 	text-align: right;
-	//float: right;
+	/*float: right;*/
 }
 .headerlinkmenu .links {
 	display: inline-block
@@ -181,49 +201,28 @@
 	color: #b7dc36;
 	text-decoration: none
 }
-/******************************************
- Responsive
-******************************************/
 
+    
+}
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+//
+//  Mobile
+//  _____________________________________________
 
-    .headerlinkmenu .links {
-        float: left;
-    }
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
     
-    .headerlinkmenu {
-        padding-left: 0px
-    }
-    
-    }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-    
-    .welcome-info {
-        padding: 10px 0px 30px
-    }
-    .welcome-info .page-header h1 {
-        font-size: 30px
-    }
-    .welcome-info .page-header p {
-        font-size: 20px;
-        line-height: 35px
-    }
-    .welcome-info .page-header p em {
-        padding-bottom: 2px
-    }
-    .welcome-msg {
-        float: left
-    }
-    .headerlinkmenu {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    
-    }
-     @media only screen and (min-width: 992px) and (max-width: 1169px) {
-    .headerlinkmenu .links {
-        margin-right: 12px;
-    }
-    
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .header.content {
+		padding: 45px 20px 25px !important;
+	}
+
 }
